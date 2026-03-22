@@ -87,3 +87,6 @@ docker-compose up -d
 - How to automate builds with GitHub Actions
 ```
 # CI/CD Pipeline added
+
+## Monitoring
+Prometheus and Grafana are used to monitor all services.
