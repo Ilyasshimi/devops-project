@@ -4,6 +4,8 @@ A hands-on DevOps lab built on VMware with Ubuntu Server 22.04.
 This project simulates a real company infrastructure with load balancing,
 containerized apps, a database server, monitoring, and a CI/CD pipeline.
 
+---
+
 ## What I Built
 
 - A 3-tier architecture: Load Balancer → App Server → Database
@@ -13,9 +15,13 @@ containerized apps, a database server, monitoring, and a CI/CD pipeline.
 - Monitoring stack with Prometheus and Grafana
 - Automated CI/CD pipeline using GitHub Actions
 
+---
+
 ## Architecture Diagram
 
-![Architecture](screenshots/diagram.png)
+![Architecture](architecture-diagram.png)
+
+---
 
 ## Project Flow
 ```
@@ -30,6 +36,8 @@ MySQL Database (VM3 - 192.168.190.30)
 Prometheus + Grafana (Monitoring)
 ```
 
+---
+
 ## Virtual Machines
 
 | VM | Hostname | IP | Role |
@@ -37,6 +45,8 @@ Prometheus + Grafana (Monitoring)
 | VM1 | load-balancer | 192.168.190.10 | Nginx |
 | VM2 | app-server | 192.168.190.20 | Node.js + Docker |
 | VM3 | database-server | 192.168.190.30 | MySQL |
+
+---
 
 ## Tech Stack
 
@@ -52,10 +62,14 @@ Prometheus + Grafana (Monitoring)
 | Grafana | Monitoring Dashboard |
 | GitHub Actions | CI/CD Pipeline |
 
+---
+
 ## API Endpoints
 
 - `GET /` → Returns Hello World
 - `GET /metrics` → Prometheus metrics
+
+---
 
 ## How to Run
 ```bash
@@ -63,6 +77,8 @@ git clone https://github.com/Ilyasshimi/devops-project.git
 cd devops-project
 docker-compose up -d
 ```
+
+---
 
 ## Screenshots
 
@@ -78,18 +94,50 @@ docker-compose up -d
 ### Grafana Dashboard
 ![Grafana](screenshots/grafana.png)
 
+---
+
+## CI/CD Pipeline
+
+This project includes an automated CI/CD pipeline using GitHub Actions.
+
+Pipeline file: `.github/workflows/docker-ci.yml`
+
+On every `git push`, the pipeline automatically:
+
+1. Checks out the code
+2. Builds the Docker image
+3. Verifies the build was successful
+
+---
+
+## Monitoring
+
+Prometheus and Grafana are used to monitor all services.
+
+- Prometheus collects metrics from the Node.js app
+- Grafana displays the metrics in a dashboard
+
+---
+
 ## What I Learned
 
 - How to design and build a multi-server infrastructure
 - How to use Docker and Docker Compose in production-like environments
 - How to configure Nginx as a reverse proxy
 - How to set up monitoring with Prometheus and Grafana
-- How to automate builds with GitHub Actions
-```
-# CI/CD Pipeline added
+- How to automate CI/CD pipelines with GitHub Actions
 
-## Monitoring
-Prometheus and Grafana are used to monitor all services.
+---
+
+## Future Improvements
+
+- Deploy to a cloud platform (AWS EC2)
+- Push Docker images to Docker Hub automatically
+- Improve Grafana monitoring dashboards
+
+---
 
 ## Author
-Ilyass Himi - DevOps Engineer in training
+
+**Ilyass Himi**
+DevOps Engineer in training
