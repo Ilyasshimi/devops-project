@@ -90,3 +90,6 @@ docker-compose up -d
 
 ## Monitoring
 Prometheus and Grafana are used to monitor all services.
+
+## Author
+Ilyass Himi - DevOps Engineer in training
