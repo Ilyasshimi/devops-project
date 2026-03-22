@@ -86,3 +86,4 @@ docker-compose up -d
 - How to set up monitoring with Prometheus and Grafana
 - How to automate builds with GitHub Actions
 ```
+# CI/CD Pipeline added
